@@ -26,8 +26,8 @@ public class Num {
         String[] s;
         int[] num;
         int[] num1;
-        int count;
-        boolean found = true;
+        short count;
+        short total;
         while ((line = buffer.readLine()) != null) {
             
             line = line.trim();
@@ -35,27 +35,28 @@ public class Num {
             s = line.split("");
             num = new int[s.length];
             count = 0;
+            total = 0;
             
             for(int i = 0; i<s.length; i++){
-                if(!s[i].isEmpty())
+                if(!s[i].isEmpty()){
                 num[i] = Integer.parseInt(s[i]);
+                }
+                total += num[i];
             }
             num1 = new int[num.length-1];
-            for(int i = 0; i<s.length; i++){
-                num1[i] = num[i+1];
+            for(int i = 1; i<s.length; i++){
+                num1[i-1] = num[i];
             }
-            
-            for (int i = 0; i < num.length; i++) {
-                for (int j = 0; j < num.length; j++) {
-                    if(i== num[j]){
+            // cubic time not really good, but the data sets are small so its ok here
+            for (int i = 0; i < num1.length; i++) {
+                for (int j = 0; j < num1.length; j++) {
+                    if(i== num1[j]){
                         count++;
                     }
                 }
-                if(num[i] != count){
-                    found = false;
-                }
+                
             }
-            if(found){
+            if(total == count){
                 System.out.println("1");
             }else{
                 System.out.println("0");
