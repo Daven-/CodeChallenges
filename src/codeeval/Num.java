@@ -47,7 +47,7 @@ public class Num {
             for(int i = 1; i<s.length; i++){
                 num1[i-1] = num[i];
             }
-            // cubic time not really good, but the data sets are small so its ok here
+            // quadratic time not really good, but the data sets are small so its ok here
             for (int i = 0; i < num1.length; i++) {
                 for (int j = 0; j < num1.length; j++) {
                     if(i== num1[j]){
