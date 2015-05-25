@@ -1,2 +1,2 @@
-# CodeEval
-Code for my completed or in progress challanges over at https://www.codeeval.com
+# Some code challenging website 
+completed code for challenges 
