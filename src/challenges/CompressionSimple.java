@@ -33,11 +33,9 @@ public class CompressionSimple {
             num = new int[buff.length];
             count = 1;
             
+            // two loops! smh 
             for (int i = 0; i < num.length; i++) {
                 num[i] = Integer.parseInt(buff[i]);
-            }
-            
-            for (int i = 0; i < num.length; i++) {
                 if(i != 0){
                     if(num[i] == num[i-1]){
                         count++;
