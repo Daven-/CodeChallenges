@@ -32,22 +32,19 @@ public class CompressionSimple {
             buff = line.split(" ");
             num = new int[buff.length];
             count = 1;
-            
-            // two loops! smh 
-            for (int i = 0; i < num.length; i++) {
+            num[0] = Integer.parseInt(buff[0]); // save time by removing i != 0 from loop
+            // two loops! smh - but somehow two seperate loops is faster by 100ms 0.0
+            for (int i = 1; i < num.length; i++) {
                 num[i] = Integer.parseInt(buff[i]);
-                if(i != 0){
                     if(num[i] == num[i-1]){
                         count++;
                     }else{
                         System.out.print(" "+count+" "+num[i-1]);
                         count=1;
                     }
-                }
             }
             System.out.print(" "+count+" "+num[num.length-1]);
             System.out.println();
         }
-        
     }
 }
