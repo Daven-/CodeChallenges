@@ -55,7 +55,7 @@ public class BitPositions {
     }
      public static String rabbit(int num, String word){ 
          
-         if(num <= 0){// make binary representtion 
+         if(num <= 0){// convert to binary 
              return word;
          }else{
              if(num%2 == 0){
