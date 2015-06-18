@@ -14,22 +14,15 @@ import java.io.IOException;
  *
  * @author Daven
  */
-public class Mod {
+public class UpperLower {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException{
-        File file = new File("src/mod.txt");
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
+     
        
-        String[] data;
-        while((line = buffer.readLine())!= null){
-            //line = line.trim();
-            data = line.split(",");
-            System.out.println(Integer.parseInt(data[0])%Integer.parseInt(data[1]));
-        }
     }
+
     
 }
