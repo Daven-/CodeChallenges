@@ -23,24 +23,19 @@ public class DecimalToBinary {
        
         
         String bitRep;
-        String bitA;
-        
         int bit;
         while((line = buffer.readLine())!= null){
             line = line.trim();
             bitRep = "";
             bit = Integer.parseInt(line);
-            bitA = "";
             
             if(bit != 0){
                 bitRep = rabbit(bit, "");
-                bitRep = new StringBuilder(bitRep).reverse().toString();
+                bitRep = new StringBuilder(bitRep).reverse().toString(); // reverse the string since the bit representation is reveresed 
                 System.out.println(bitRep);
             }else{
                 System.out.println("0");
             }
-            
-       
         }
     }
     public static String rabbit(int num, String word){ 
