@@ -22,7 +22,6 @@ public class FirstNonRepeat {
         BufferedReader buffer = new BufferedReader(new FileReader(file));
         String line;
         
-        String[] buff;
         char key;
         HashMap<Character, Integer> map; // hash map to compress number sequences - doesn't work fully since location is not perserved. 
         Integer data;
@@ -30,7 +29,6 @@ public class FirstNonRepeat {
         while ((line = buffer.readLine()) != null) {
             line = line.trim();
             // Process line of input Here
-            buff = line.split("");
             key = 'I';//search for letter
             map = new HashMap();
             data = 0;
