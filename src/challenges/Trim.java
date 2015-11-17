@@ -21,7 +21,7 @@ public class Trim {
         File file = new File("src/trim.txt");
         BufferedReader buffer = new BufferedReader(new FileReader(file));
         String line;
-            
+
         while ((line = buffer.readLine()) != null) {
             //System.out.println(line + " Length: "+line.length());
             line = line.trim();
@@ -29,9 +29,9 @@ public class Trim {
             if(line.length() > 55){
                 line = line.substring(0, 40);
                 //line = line.trim();
-                
+
                 System.out.println(line.concat("... <Read More>"));
-                
+
             }else{
                 System.out.println(line);
             }

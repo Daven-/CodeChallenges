@@ -19,7 +19,7 @@ public class LongestWord {
         File file = new File("src/longword.txt");
         BufferedReader buffer = new BufferedReader(new FileReader(file));
         String line;
-        
+
         String[] words;
         int key;
         short length;
@@ -28,7 +28,7 @@ public class LongestWord {
             length = 0;
             line = line.trim();
             words = line.split("\\s+");
-            
+
             for (int i = 0; i<words.length; i++) {
                 if(words[i].length() > length){
                     length = (short) words[i].length();

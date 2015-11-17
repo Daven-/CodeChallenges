@@ -20,16 +20,16 @@ public class CapitalizeWords {
         File file = new File("src/cap.txt");
         BufferedReader buffer = new BufferedReader(new FileReader(file));
         String line;
-        
+
         String[] data;
         while ((line = buffer.readLine()) != null) {
             line = line.trim();
             data = line.split(" ");
-            
+
             // Process line of input Here
             for (int i = 0; i < data.length; i++) {
                 String temp = data[i];
-               
+
                 System.out.print(Character.toUpperCase(data[i].charAt(0))+ temp.substring(1, temp.length()) + " ");
             }
             System.out.println();

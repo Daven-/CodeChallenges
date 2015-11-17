@@ -40,7 +40,6 @@ public class BitPositions {
               x = x-1;
             if(y != 0)
               y = y-1;
-            
             c1 = bit.charAt(x);
             c2 = bit.charAt(y);
             
@@ -56,7 +55,7 @@ public class BitPositions {
      public static String rabbit(int num, String word){ 
          
          if(num <= 0){// convert to binary 
-             return word;
+             return word; 
          }else{
              if(num%2 == 0){
                  word += "0";

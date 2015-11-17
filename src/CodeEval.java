@@ -18,4 +18,3 @@ public class CodeEval {
         // TODO code application logic here
         System.out.println("hello");
     }
-}
